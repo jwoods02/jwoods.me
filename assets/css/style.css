@@ -35,39 +35,29 @@ nav {
   padding-top: 20px;
   }
 
-nav>div {
-  display: inline;
-  position: relative;
-  padding-left: 4vw;
-  padding-right: 4vw;
-}
-
-nav div[id*='nav'][id$='icon'] {
-  display: auto;
-  position: absolute;
-  width: 80%;
-  height: 8px;
-  top: -10px;
-  margin: 0px 0 0 -40%;
-  left: 50%;
-  text-align: center;
-
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-}
-
-#nav-hero-icon{background:#B8312F}
-#nav-services-icon{background:#1fa67a}
-#nav-work-icon{background:#2980b9}
-#nav-contact-icon{background:#2c3e50}
-
 nav a {
   font-size: 1em;
   font-family: 'Ubuntu', Arial, sans-serif;
   text-decoration: none;
+  display: inline;
+  margin: 0 1vw;
+  padding: 0 3vw 4px;
+  position: relative;
 }
 
+nav a:after {
+    content: "";
+    height: 6px;
+    position: absolute;
+    z-index: 1;
+    top:20px; right:0; left:0; bottom:0;
+    border-radius: 45px;
+}
+
+#nav-home:after{background:#B8312F}
+#nav-services:after{background:#1fa67a}
+#nav-work:after{background:#2980b9}
+#nav-contact:after{background:#2c3e50}
 
 /* HERO */
 
