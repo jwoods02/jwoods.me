@@ -35,17 +35,34 @@ nav {
   padding-top: 20px;
   }
 
+nav ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  float: left;
+  text-align: center;
+  display: block;
+  width: 25%; /* fallback for non-calc() browsers */
+  width: calc(100% / 4);
+  box-sizing: border-box;
+}
+
 nav a {
+  display: inline;
+  text-decoration: none;
   font-size: 1em;
   font-family: 'Ubuntu', Arial, sans-serif;
-  text-decoration: none;
-  display: inline;
   margin: 0 1vw;
   padding: 0 3vw 4px;
   position: relative;
 }
 
 nav a:after {
+    z-index: 2;
     content: "";
     height: 6px;
     position: absolute;
