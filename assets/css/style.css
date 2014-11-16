@@ -37,6 +37,7 @@ nav {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 nav ul {
   overflow: hidden;
   margin: 0;
@@ -68,6 +69,10 @@ nav>div {
 nav>div {
   display: inline;
 >>>>>>> parent of d791642... Changed navigation
+=======
+nav>div {
+  display: inline;
+>>>>>>> parent of d791642... Changed navigation
   position: relative;
   padding-left: 4vw;
   padding-right: 4vw;
@@ -90,6 +95,7 @@ nav div[id*='nav'][id$='icon'] {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 nav a:after {
     z-index: 2;
     content: "";
@@ -99,6 +105,8 @@ nav a:after {
     top:20px; right:0; left:0; bottom:0;
     border-radius: 45px;
 =======
+=======
+>>>>>>> parent of d791642... Changed navigation
 =======
 >>>>>>> parent of d791642... Changed navigation
 #nav-hero-icon{background:#B8312F}
@@ -111,6 +119,9 @@ nav a {
   font-family: 'Ubuntu', Arial, sans-serif;
   text-decoration: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of d791642... Changed navigation
+=======
 >>>>>>> parent of d791642... Changed navigation
 =======
 >>>>>>> parent of d791642... Changed navigation
