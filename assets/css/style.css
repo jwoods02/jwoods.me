@@ -3,10 +3,7 @@ html, body {
   padding: 0;
 }
 
-#hero,
-#services,
-#work,
-#contact {
+#hero ,#services, #work, #contact {
   min-height: 100vh;
   position: relative;
   padding: 1em;
@@ -35,40 +32,21 @@ nav {
   padding-top: 20px;
   }
 
-nav>div {
-  display: inline;
-  position: relative;
-  padding-left: 4vw;
-  padding-right: 4vw;
-}
-
-nav div[id*='nav'][id$='icon'] {
-  display: auto;
-  position: absolute;
-  width: 80%;
-  height: 8px;
-  top: -10px;
-  margin: 0px 0 0 -40%;
-  left: 50%;
-  text-align: center;
-
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-}
-
-#nav-hero-icon{background:#B8312F}
-#nav-services-icon{background:#1fa67a}
-#nav-work-icon{background:#2980b9}
-#nav-contact-icon{background:#2c3e50}
 
 nav a {
-  font-size: 1em;
+  font-size: 1.25em;
   font-family: 'Ubuntu', Arial, sans-serif;
   text-decoration: none;
+  display: inline;
+  margin: 0 1vw;
+  padding: 0 3vw 4px;
+  border-bottom: 2px solid
 }
 
-
+#nav-home{border-bottom-color: #B8312F}
+#nav-services{border-bottom-color: #1fa67a}
+#nav-work{border-bottom-color: #2980b9}
+#nav-contact{border-bottom-color: #2c3e50}
 /* HERO */
 
 #hero {
@@ -97,7 +75,6 @@ nav a {
 
 #services a {
   margin-bottom: 20vh;
-  color: #464f58;
   text-decoration: none;
 }
 /* WORK */
@@ -120,9 +97,8 @@ nav a {
 
 
 #contact a {
-  color: #f5f6f7;
-  font-weight: 400;
   text-decoration: none;
+  color: #f5f6f7;
 }
 
 #contact i {
@@ -181,11 +157,14 @@ nav a {
     display: none;
   }
 
-  #hero,
-  #services,
-  #work,
-  #contact {
+  nav a, #hero, #services, #work, #contact {
     font-size: 1em;
   }
 
+}
+
+@media (max-width : 375px){
+  nav a{
+    font-size: 0.9em;
+  }
 }
