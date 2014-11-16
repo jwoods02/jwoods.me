@@ -35,6 +35,7 @@ nav {
   padding-top: 20px;
   }
 
+<<<<<<< HEAD
 nav ul {
   overflow: hidden;
   margin: 0;
@@ -58,9 +59,31 @@ nav a {
   font-family: 'Ubuntu', Arial, sans-serif;
   margin: 0 1vw;
   padding: 0 3vw 4px;
+=======
+nav>div {
+  display: inline;
+>>>>>>> parent of d791642... Changed navigation
   position: relative;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
+nav div[id*='nav'][id$='icon'] {
+  display: auto;
+  position: absolute;
+  width: 80%;
+  height: 8px;
+  top: -10px;
+  margin: 0px 0 0 -40%;
+  left: 50%;
+  text-align: center;
+
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+<<<<<<< HEAD
 nav a:after {
     z-index: 2;
     content: "";
@@ -69,12 +92,19 @@ nav a:after {
     z-index: 1;
     top:20px; right:0; left:0; bottom:0;
     border-radius: 45px;
+=======
+#nav-hero-icon{background:#B8312F}
+#nav-services-icon{background:#1fa67a}
+#nav-work-icon{background:#2980b9}
+#nav-contact-icon{background:#2c3e50}
+
+nav a {
+  font-size: 1em;
+  font-family: 'Ubuntu', Arial, sans-serif;
+  text-decoration: none;
+>>>>>>> parent of d791642... Changed navigation
 }
 
-#nav-home:after{background:#B8312F}
-#nav-services:after{background:#1fa67a}
-#nav-work:after{background:#2980b9}
-#nav-contact:after{background:#2c3e50}
 
 /* HERO */
 
