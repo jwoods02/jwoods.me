@@ -39,6 +39,7 @@ nav {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 nav ul {
   overflow: hidden;
   margin: 0;
@@ -134,6 +135,30 @@ nav div[id*='nav'][id$='icon'] {
 }
 
 >>>>>>> parent of d791642... Changed navigation
+=======
+nav>div {
+  display: inline;
+  position: relative;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+nav div[id*='nav'][id$='icon'] {
+  display: auto;
+  position: absolute;
+  width: 80%;
+  height: 8px;
+  top: -10px;
+  margin: 0px 0 0 -40%;
+  left: 50%;
+  text-align: center;
+
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+>>>>>>> parent of d791642... Changed navigation
 #nav-hero-icon{background:#B8312F}
 #nav-services-icon{background:#1fa67a}
 #nav-work-icon{background:#2980b9}
@@ -146,6 +171,9 @@ nav a {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of d791642... Changed navigation
+=======
 >>>>>>> parent of d791642... Changed navigation
 =======
 >>>>>>> parent of d791642... Changed navigation
