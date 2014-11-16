@@ -1,92 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="James Woods - A student and rookie web developer from the UK.">
+  <meta name="author" content="James Woods">
+  <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title>James Woods</title>
+  <title>James Woods</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/animate.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:700|Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
+<body>
 
-  <body>
+<nav>
 
+  <div id="nav-hero">
+    <div id="nav-hero-icon"></div>
+    <a href="index.html#hero">Home</a>
+  </div>
 
-	<div class="nav animated fadeInRight">
-		<a href="index.html#hero" class="scroll">Home</a>
-		<a href="index.html#services" class="scroll">Services</a>
-		<a href="index.html#work" class="scroll">Work</a>
-		<a href="index.html#contact" class="scroll">Contact</a>
-	</div>
+  <div id="nav-services">
+    <div id="nav-services-icon"></div>
+    <a href="index.html#services" >Services</a>
+  </div>
 
-	<section id="hero">
-		<h1 class="animated fadeInDown">James Woods</h1>
-		<p class="animated fadeInUp">A student and rookie web developer from the UK.</p>
-		<a href="index.html#services" class="scroll"><i class="fa fa-chevron-down fa-lg"></i></a>
-	</section>
+  <div id="nav-work">
+    <div id="nav-work-icon"></div>
+    <a href="index.html#work">Work</a>
+  </div>
 
-	<section id="services">
-		<h2>Services</h2>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<i class="fa fa-code fa-4x"></i>
-					<h3>Fully Responsive HTML5 and CSS3 Websites</h3>
-					<p class="hidden-xs">My static sites use the Bootstrap 3 framework. This makes them fully adaptable to any screen size, perfect for a small business.</p>
-				</div>
+  <div id="nav-contact">
+    <div id="nav-contact-icon"></div>
+    <a href="index.html#contact">Contact</a>
+  </div>
 
-				<div class="col-md-6">
-				<i class="fa fa-wordpress fa-4x"></i>
-					<h3>Wordpress Websites</h3>
-					<p class="hidden-xs">I can build fully responsive Wordpress themes using Bootstrap and setup a site with this installed. A Wordpress site allows you to edit content and and use any Wordpress plugin(s), perfect for your blog or personal website.</p>
-				</div>
-			</div>
-			<br/><p> If you are interested <a style="  font-weight: 400; color: #2c3e50;"href="index.html#contact">contact</a> me.</p>
-		</div>
-		<a href="index.html#work" class="scroll hidden-xs"><i class="fa fa-chevron-down fa-lg hidden-xs"></i></a>
-	</section>
+</nav>
 
+  <section id="hero">
+    <h1 class="animated fadeInDown">James Woods</h1>
+    <p class="animated fadeInUp">A student and rookie web developer from the UK.</p>
+  </section>
 
-	<section id="work">
-		<h2>My Work</h2>
-		<a href="">My Sandbox</a><p> - A collection of things I have created such as games and web applications.</p>
-		<a href="index.html#contact" class="scroll hidden-xs"><i class="fa fa-chevron-down fa-lg hidden-xs"></i></a>
-	</section>
-
-
-
-	<section id="contact">
-		<h2>Contact</h2>
-		<i class="mail fa fa-envelope"></i> <a href=mailto:"james@jameswoods.net">jwwoods01@gmail.com</a>
-	</section>
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="col-1-2">
+        <i class="fa fa-code fa-4x"></i>
+        <h3>Fully Responsive HTML5 and CSS3 Websites</h3>
+        <p class="hidexs">My static sites use the Bootstrap 3 framework. This makes them fully adaptable to any screen size, perfect for a small business.</p>
+      </div>
+      <div class="col-1-2">
+        <i class="fa fa-wordpress fa-4x"></i>
+        <h3>Wordpress Websites</h3>
+        <p class="hidexs">I can build fully responsive Wordpress themes using Bootstrap and setup a site with this installed. A Wordpress site allows you to edit content and and use any Wordpress plugin(s), perfect for your blog or personal website.</p>
+      </div>
+    </div>
+    <a href="index.html#contact"class="hidexs"> If you are interested contact me.</p>
+  </section>
 
 
+  <section id="work">
+    <h2>My Work</h2>
+    <a href="http://github.com/ijames55/python_blackjack">Python Blackjack</a><p> - A console blackjack game built in Python.</p>
+  </section>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/site-ck.js"></script>
-  </body>
+
+
+  <section id="contact">
+    <h2>Contact/Find Me</h2>
+    <a href=mailto:"james@jwoods.me"><i class="mail fa fa-envelope"></i> james@jwoods.me</a>
+  </br> </br>
+    <a href="https://github.com/ijames55"><i class="fa fa-github"></i> Github: iJames55</a>
+
+    <p> &copy; James Woods 2014. </p>
+  </section>
+
+
+
+<!-- Javascript -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
 </html>
