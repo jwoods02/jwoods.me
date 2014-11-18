@@ -16,8 +16,7 @@ body {
   margin: 0;
   text-align: center;
   color: #f5f6f7;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
-  font-size: 1.25em;
+  font: 1.25em 'Source Sans Pro', Arial, sans-serif;
 }
 
 h2 {  padding-top: 10vh }
@@ -37,8 +36,7 @@ nav {
 }
 
 nav a {
-  font-size: 1.25em;
-  font-family: 'Ubuntu', Arial, sans-serif;
+  font: 1.25em 'Ubuntu', Arial, sans-serif;
   text-decoration: none;
   display: inline;
   margin: 0 1vw;
@@ -67,8 +65,7 @@ nav a {
 #hero p {  font-size: 1.5em }
 
 #hero h1 {
-  font-size: 4em;
-  font-family: 'Ubuntu', Arial, sans-serif;
+  font: 4em 'Ubuntu', Arial, sans-serif;
 }
 
 /* SERVICES
@@ -108,7 +105,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 1;
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 /* CSS GRID
@@ -128,7 +125,7 @@ a {
 }
 
 .grid:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -148,18 +145,18 @@ a {
 /* RESPONSIVE
    ================================================== */
 
-@media (max-width:600px) , (max-height:600px) {
-    #hero {  padding-top: 5vh }
+@media (max-width:600px), (max-height:600px) {
+    #hero { padding-top: 5vh }
 
-    .hidexs {  display: none }
+    .hidexs { display: none }
 
     nav a,
     #hero,
     #services,
     #work,
-    #contact {  font-size: 1em }
+    #contact { font-size: 1em }
 }
 
 @media (max-width:375px) {
-    nav a {  font-size: 0.9em }
+    nav a { font-size: .9em }
 }
