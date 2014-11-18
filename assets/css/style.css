@@ -16,7 +16,8 @@ body {
   margin: 0;
   text-align: center;
   color: #f5f6f7;
-  font: 1.25em 'Source Sans Pro', Arial, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 1.25em;
 }
 
 h2 {  padding-top: 10vh }
@@ -36,7 +37,8 @@ nav {
 }
 
 nav a {
-  font: 1.25em 'Ubuntu', Arial, sans-serif;
+  font-size: 1.25em;
+  font-family: 'Ubuntu', Arial, sans-serif;
   text-decoration: none;
   display: inline;
   margin: 0 1vw;
@@ -65,7 +67,8 @@ nav a {
 #hero p {  font-size: 1.5em }
 
 #hero h1 {
-  font: 4em 'Ubuntu', Arial, sans-serif;
+  font-size: 4em;
+  font-family: 'Ubuntu', Arial, sans-serif;
 }
 
 /* SERVICES
@@ -135,7 +138,7 @@ a {
   padding-right: 20px;
 }
 
-.grid [class*='col-']:last-of-type {  padding-right: 20px }
+.grid [class*='col-']:last-of-type { padding-right: 20px }
 
 .col-1-2 {
   width: 50%;
