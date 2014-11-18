@@ -1,9 +1,15 @@
-html, body {
+@charset "UTF-8";
+
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
-#hero ,#services, #work, #contact {
+#hero,
+#services,
+#work,
+#contact {
   min-height: 100vh;
   position: relative;
   padding: 1em;
@@ -14,15 +20,13 @@ html, body {
   font-size: 1.25em;
 }
 
-h2 {
-  padding-top: 10vh;
-}
+h2 {  padding-top: 10vh }
 
-h2, h3 {
-  font-family: 'Ubuntu', Arial, sans-serif;
-}
+h2,
+h3 {  font-family: 'Ubuntu', Arial, sans-serif }
 
-/* NAV */
+/* NAV
+   ================================================== */
 
 nav {
   position: fixed;
@@ -30,8 +34,7 @@ nav {
   text-align: center;
   z-index: 1;
   padding-top: 20px;
-  }
-
+}
 
 nav a {
   font-size: 1.25em;
@@ -40,14 +43,19 @@ nav a {
   display: inline;
   margin: 0 1vw;
   padding: 0 3vw 4px;
-  border-bottom: 2px solid
+  border-bottom: 2px solid;
 }
 
-#nav-home{border-bottom-color: #B8312F}
-#nav-services{border-bottom-color: #1fa67a}
-#nav-work{border-bottom-color: #2980b9}
-#nav-contact{border-bottom-color: #2c3e50}
-/* HERO */
+#nav-home {  border-bottom-color: #B8312F }
+
+#nav-services {  border-bottom-color: #1fa67a }
+
+#nav-work {  border-bottom-color: #2980b9 }
+
+#nav-contact {  border-bottom-color: #2c3e50 }
+
+/* HERO
+   ================================================== */
 
 #hero {
   background: #B8312F;
@@ -56,54 +64,45 @@ nav a {
   margin: 0 auto;
 }
 
-
-#hero p {
-  font-size: 1.5em;
-}
+#hero p {  font-size: 1.5em }
 
 #hero h1 {
   font-size: 4em;
   font-family: 'Ubuntu', Arial, sans-serif;
 }
 
+/* SERVICES
+   ================================================== */
 
-/* SERVICES */
-
-#services {
-  background: #1fa67a;
-}
+#services {  background: #1fa67a }
 
 #services a {
   margin-bottom: 20vh;
   text-decoration: none;
 }
-/* WORK */
 
-#work {
-  background: #2980b9;
-}
+/* WORK
+   ================================================== */
 
-#work p, a {
+#work {  background: #2980b9 }
+
+#work p,
+a {
   display: inline;
   color: #f5f6f7;
 }
 
+/* CONTACT
+   ================================================== */
 
-/* CONTACT */
-
-#contact {
-  background: #2c3e50;
-}
-
+#contact {  background: #2c3e50 }
 
 #contact a {
   text-decoration: none;
   color: #f5f6f7;
 }
 
-#contact i {
-  padding-right: 10px;
-}
+#contact i {  padding-right: 10px }
 
 #contact p {
   position: absolute;
@@ -112,13 +111,15 @@ nav a {
   font-size: 0.8em;
 }
 
+/* CSS GRID
+   ================================================== */
 
-/* CSS GRID */
-
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .grid {
@@ -136,34 +137,29 @@ nav a {
   float: left;
   padding-right: 20px;
 }
-.grid [class*='col-']:last-of-type {
-  padding-right: 20px;
-}
+
+.grid [class*='col-']:last-of-type {  padding-right: 20px }
 
 .col-1-2 {
   width: 50%;
   padding: 20px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE
+   ================================================== */
 
-@media (max-width : 600px) , (max-height : 600px) {
-  #hero {
-    padding-top: 5vh;
-  }
+@media (max-width:600px) , (max-height:600px) {
+    #hero {  padding-top: 5vh }
 
-  .hidexs{
-    display: none;
-  }
+    .hidexs {  display: none }
 
-  nav a, #hero, #services, #work, #contact {
-    font-size: 1em;
-  }
-
+    nav a,
+    #hero,
+    #services,
+    #work,
+    #contact {  font-size: 1em }
 }
 
-@media (max-width : 375px){
-  nav a{
-    font-size: 0.9em;
-  }
+@media (max-width:375px) {
+    nav a {  font-size: 0.9em }
 }
