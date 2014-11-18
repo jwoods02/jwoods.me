@@ -3,14 +3,14 @@ html, body {
   padding: 0;
 }
 
-#hero ,#services, #work, #contact {
+#hero ,#skills, #work, #contact {
   min-height: 100vh;
   position: relative;
   padding: 1em;
   margin: 0;
   text-align: center;
   color: #f5f6f7;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 1.25em;
 }
 
@@ -19,7 +19,7 @@ h2 {
 }
 
 h2, h3 {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* NAV */
@@ -29,13 +29,13 @@ nav {
   width: 100%;
   text-align: center;
   z-index: 1;
-  padding-top: 20px;
+  padding-top: 1vh;
   }
 
 
 nav a {
   font-size: 1.25em;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   text-decoration: none;
   display: inline;
   margin: 0 1vw;
@@ -44,7 +44,7 @@ nav a {
 }
 
 #nav-home{border-bottom-color: #B8312F}
-#nav-services{border-bottom-color: #1fa67a}
+#nav-skills{border-bottom-color: #1fa67a}
 #nav-work{border-bottom-color: #2980b9}
 #nav-contact{border-bottom-color: #2c3e50}
 /* HERO */
@@ -63,17 +63,17 @@ nav a {
 
 #hero h1 {
   font-size: 4em;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 
-/* SERVICES */
+/* skills */
 
-#services {
+#skills {
   background: #1fa67a;
 }
 
-#services a {
+#skills a {
   margin-bottom: 20vh;
   text-decoration: none;
 }
@@ -156,7 +156,7 @@ nav a {
     display: none;
   }
 
-  nav a, #hero, #services, #work, #contact {
+  nav a, #hero, #skills, #work, #contact {
     font-size: 1em;
   }
 
