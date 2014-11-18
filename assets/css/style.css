@@ -73,9 +73,50 @@ nav a {
   background: #1fa67a;
 }
 
-#skills a {
-  margin-bottom: 20vh;
-  text-decoration: none;
+#skills-container {
+  text-align: left;
+  padding: 0 20vw;
+}
+
+#skills-container > p {
+  padding-top: 2vh;
+  text-align: center;
+}
+
+.skill{
+  padding: 2vh 0;
+}
+
+.meter {
+  width: 80%;
+  float: right;
+  height: 20px;
+  position: relative;
+  background: #10533d;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+     -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+         -moz-border-radius-topright: 8px;
+      -moz-border-radius-bottomright: 8px;
+             border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+      -webkit-border-top-left-radius: 20px;
+   -webkit-border-bottom-left-radius: 20px;
+          -moz-border-radius-topleft: 20px;
+       -moz-border-radius-bottomleft: 20px;
+              border-top-left-radius: 20px;
+           border-bottom-left-radius: 20px;
+  background-color: #f5f6f7;
+  position: relative;
+  overflow: hidden;
 }
 /* WORK */
 
@@ -112,40 +153,18 @@ nav a {
   font-size: 0.8em;
 }
 
-
-/* CSS GRID */
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.grid {
-  margin: 0 0 20px 0;
-  padding: 20px 0 20px 20px;
-}
-
-.grid:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-[class*='col-'] {
-  float: left;
-  padding-right: 20px;
-}
-.grid [class*='col-']:last-of-type {
-  padding-right: 20px;
-}
-
-.col-1-2 {
-  width: 50%;
-  padding: 20px;
-}
-
 /* RESPONSIVE */
+@media (max-width : 1000px) {
+  #skills-container {
+    padding: 0 5vw;
+  }
+}
+
+@media (max-width : 650px) {
+  #skills-container {
+    padding: 0 0;
+  }
+}
 
 @media (max-width : 600px) , (max-height : 600px) {
   #hero {
@@ -158,6 +177,13 @@ nav a {
 
   nav a, #hero, #skills, #work, #contact {
     font-size: 1em;
+  }
+}
+
+@media (max-width : 475px) {
+  .meter {
+    float: none;
+    margin: 1vh;
   }
 
 }
