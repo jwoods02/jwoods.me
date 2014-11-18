@@ -19,7 +19,7 @@ h2 {
 }
 
 h2, h3 {
-  font-family: 'Ubuntu', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 /* NAV */
@@ -35,7 +35,7 @@ nav {
 
 nav a {
   font-size: 1.25em;
-  font-family: 'Ubuntu', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   text-decoration: none;
   display: inline;
   margin: 0 1vw;
@@ -63,7 +63,7 @@ nav a {
 
 #hero h1 {
   font-size: 4em;
-  font-family: 'Ubuntu', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 
