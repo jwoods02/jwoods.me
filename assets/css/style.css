@@ -1,3 +1,8 @@
+body, html {
+  magin: 0;
+  padding: 0;
+}
+
 #hero ,#skills, #work, #contact {
   min-height: 100vh;
   position: relative;
