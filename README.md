@@ -1,3 +1,5 @@
 jwoods.me
 ============
-Recoding the main site completely to remove bloat, not using bootstrap css.
+My personal website.
+
+Built in HTML5 and CSS3 using a little bit of Javascript for the scrolling.
