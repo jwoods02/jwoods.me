@@ -3,7 +3,7 @@ body, html {
   padding: 0;
 }
 
-#hero ,#skills, #work, #contact {
+#hero , #skills, #work, #contact {
   min-height: 100vh;
   position: relative;
   padding: 1em;
@@ -50,7 +50,6 @@ nav a {
 
 #hero {
   background: #B8312F;
-  padding-top: 20vh;
   height: 50%;
   margin: 0 auto;
 }
@@ -61,10 +60,10 @@ nav a {
 }
 
 #hero h1 {
+  padding-top: 20vh;
   font-size: 4em;
   font-family: 'Source Sans Pro', Arial, sans-serif;
 }
-
 
 /* skills */
 
