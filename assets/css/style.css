@@ -27,7 +27,7 @@ nav {
   position: fixed;
   width: 100%;
   text-align: center;
-  z-index: 2;
+  z-index: 99;
   padding-top: 1vh;
   }
 
