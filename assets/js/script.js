@@ -13,3 +13,6 @@ $('a[href*=#]:not([href=#])').click(function() {
         }
     }
 });
+$(function() {
+    $('html,body').css({ scrollTop: 0 });
+});
