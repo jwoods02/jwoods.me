@@ -1,3 +1,8 @@
+var scrl = document.getElementsByTagName('body');
+scrl.onload = function(){
+    scrl.contentWindow.scrollTo(0,0);
+};
+
 // Smooth Scroll
 $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
