@@ -1,5 +1,5 @@
-jwoods.me
+Jwoods.Me
 ============
-My personal website.
+This is my repository for my persoaln website https://jwoods.me
 
-Built in HTML5 and CSS3 using a little bit of Javascript for the scrolling.
+It is built in HTML5 and CSS3 using a little bit of Javascript for the scrolling.
