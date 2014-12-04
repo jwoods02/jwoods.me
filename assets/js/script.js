@@ -1,8 +1,7 @@
 // Smooth Scroll
-$(function() {
-    $('html,body').css({ scrollTop: 0 });
-});
+
 $('a[href*=#]:not([href=#])').click(function() {
+    $('html,body').css({ scrollTop: 0 });
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
 
