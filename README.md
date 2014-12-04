@@ -1,4 +1,4 @@
-Jwoods.Me
+jwoods.me
 ============
 This is my repository for my persoaln website https://jwoods.me
 
