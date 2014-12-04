@@ -8,6 +8,8 @@ $('a[href*=#]:not([href=#])').click(function() {
            if (target.length) {
              $('html,body').animate({
                  scrollTop: target.offset().top
+                 e.stopPropagation();
+                 e.preventDefault();
             }, 1000);
             return false;
         }
