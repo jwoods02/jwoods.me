@@ -73,14 +73,13 @@ nav a:hover:after {
   background: #B8312F;
   height: 50%;
   margin: 0 auto;
-  font-size: 1.25em;
 }
 #hero p {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 #hero h1 {
   padding-top: 20vh;
-  font-size: 4em;
+  font-size: 6em;
 }
 
 /* skills */
