@@ -73,6 +73,7 @@ nav a:hover:after {
   background: #B8312F;
   height: 50%;
   margin: 0 auto;
+  font-size: 1.25em;
 }
 #hero p {
   font-size: 1.5em;
