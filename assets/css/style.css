@@ -129,8 +129,13 @@ nav a:hover:after {
   display: inline;
   color: #f5f6f7;
 }
-  
+
+#work #project-container {
+  text-align: left;
+}
+
 #work .project {
+  text-align: center;
   margin-bottom: 5vh;
 
 }
