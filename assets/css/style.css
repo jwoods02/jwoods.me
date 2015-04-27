@@ -131,11 +131,11 @@ nav a:hover:after {
 }
 
 #work #project-container {
-  text-align: left;
+  text-align: center;
 }
 
 #work .project {
-  text-align: center;
+  text-align: left;
   margin-bottom: 5vh;
 
 }
