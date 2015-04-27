@@ -128,10 +128,11 @@ nav a:hover:after {
 #work p {
   display: inline;
   color: #f5f6f7;
+}
   
 #work a {
   padding-bottom: 10vh;
-}
+
 }
 
 a {
