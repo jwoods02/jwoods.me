@@ -130,8 +130,8 @@ nav a:hover:after {
   color: #f5f6f7;
 }
   
-#work a {
-  padding-bottom: 10vh;
+#work .project {
+  padding-bottom: 5vh;
 
 }
 
