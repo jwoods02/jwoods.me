@@ -130,12 +130,7 @@ nav a:hover:after {
   color: #f5f6f7;
 }
 
-#work #project-container {
-  display: inline-block;
-}
-
 #work .project {
-  text-align: left;
   margin-bottom: 5vh;
 
 }
