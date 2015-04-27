@@ -147,6 +147,8 @@ a {
 #contact a {
   text-decoration: none;
   color: #f5f6f7;
+  display: inline;
+  margin-bottom: 5vh;
 }
 #contact i {
   padding-right: 10px;
