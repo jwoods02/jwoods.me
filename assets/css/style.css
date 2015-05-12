@@ -62,9 +62,8 @@ nav a {
   text-decoration: none;
   display: inline;
   margin: 0 1vw;
-  padding: 0 3vw 4px;
+  padding: 0 6vw 4px;
   position: relative;
-  padding: 0 40px;
   height: 60px;
   line-height: 60px;
   text-decoration: none;
@@ -203,6 +202,9 @@ a {
 @media (max-width: 650px) {
   #skills-container {
     padding: 0 0;
+  }
+  nav a {
+    padding: 0 3vw 4px;
   }
 }
 @media (max-width: 600px), (max-height: 600px) {
