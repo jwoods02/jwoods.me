@@ -14,9 +14,13 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/font-awesome.css" rel="stylesheet">
   <link href="assets/css/animate.css" rel="stylesheet">
+  <link href="assets/css/animations.css" rel="stylesheet">
 
   <!-- Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Noto+Serif:400|Open+Sans:700,400" rel="stylesheet" type="text/css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -25,6 +29,19 @@
   <![endif]-->
 
 </head>
+
+<script>
+	$(window).scroll(function() {
+		$('.wow').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+800) {
+				$(this).addClass("stretchRight");
+			}
+		});
+	});
+</script>
 
 <body>
 
@@ -44,23 +61,23 @@
     <h2>Skills</h2>
     <div id="skills-container">
       <div class="skill">
-          <span>Bootstrap:</span><div class="meter"><span style="width: 90%"></span></div>
+          <span>Bootstrap:</span><div class="meter"><span id="scroll-animate" class="wow" style="width: 90%"></span></div>
         </div>
 
         <div class="skill">
-          <span>HTML5:</span><div class="meter"><span style="width: 90%"></span></div>
+          <span>HTML5:</span><div class="meter"><span id="scroll-animate" class="wow" style="width: 85%"></span></div>
         </div>
 
         <div class="skill">
-          <span>CSS3:</span><div class="meter"><span style="width:60%"></span></div>
+          <span>CSS3:</span><div class="meter"><span id="scroll-animate" class="wow" style="width:65%"></span></div>
         </div>
 
         <div class="skill">
-          <span>Python:</span><div class="meter"><span style="width: 60%"></span></div>
+          <span>Python:</span><div class="meter"><span id="scroll-animate" class="wow" style="width: 60%"></span></div>
         </div>
 
         <div class="skill">
-          <span>Wordpress:</span><div class="meter"><span style="width: 50%"></span></div>
+          <span>Wordpress:</span><div class="meter"><span id="scroll-animate" class="wow" style="width: 50%"></span></div>
         </div>
       </div>
 
@@ -88,8 +105,6 @@
 
 
 <!-- Javascript -->
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/js/script.js"></script>
-
 </body>
 </html>
