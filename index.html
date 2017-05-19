@@ -9,31 +9,19 @@
     <meta name="author" content="James Woods">
 
     <!-- Favicon data -->
-    <meta name="msapplication-TileColor" content="#b8312f">
-    <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
-    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#b8312f">
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-194x194.png" sizes="194x194">
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/assets/favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/assets/favicon/manifest.json">
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
 
 
     <title>James Woods</title>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <link href="assets/css/animate.min.css" rel="stylesheet">
@@ -68,56 +56,75 @@
 
 <body>
 
-    <section id="hero">
+    <section id="hero" class="teal darken-2">
 
-        <h1 class="animated fadeInDown">James Woods</h1>
+        <div class="container">
+            <h1 class="animated fadeInDown">James Woods</h1>
 
-        <p class="animated fadeInUp">Software Engineering (BSc) Student at Cardiff University.</p>
+            <p class="animated fadeInUp">Software Engineering (BSc) Student at Cardiff University.</p>
 
-        <div class="contact">
-            <a href="mailto:jwwoods01@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
-            <a href="https://www.linkedin.com/in/james-woods/" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
-            <a href="https://github.com/ijames55" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+            <div class="contact">
+                <a href="mailto:jwwoods01@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/james-woods/" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
+                <a href="https://github.com/ijames55" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+            </div>
+
         </div>
 
     </section>
 
     <section id="work">
-        <div class="grid">
+        <div class="container">
+            <div class="row">
 
-            <div class="grid-cell">
-                <figure class="project">
-                    <img src="http://placehold.it/640x360" alt="">
-                    <div class="project-container">
-                        <a href="http://github.com/ijames55/Twitter-Mood-Light" target="_blank">Twitter Mood Light</a>
-                        <p>An Arduino and Python project that shows the mood of Twitter as an RGB LED.</p>
-                    </div>
-                </figure>
+                <div class="col l4 m4 s12">
+                    <figure class="card">
+                        <div class="card-image">
+                            <img src="assets/img/drama_centre.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">The Drama Centre</span>
+                            <p>A HTML5, CSS3 and Bootstrap site built for a local start up.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="http://lamda.jwoods.me" target="_blank">Link</a>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col l4 m4 s12">
+                    <figure class="card">
+                        <div class="card-image">
+                            <img src="assets/img/mood_light.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Twitter Mood Light</span>
+                            <p>An Arduino and Python project that shows the mood of Twitter as an RGB LED.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="http://github.com/ijames55/Twitter-Mood-Light" target="_blank">Source</a>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="col l4 m4 s12">
+                    <figure class="card">
+                        <div class="card-image">
+                            <img src="assets/img/python_blackjack.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Python Blackjack</span>
+                            <p>A console blackjack game build in Python.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="http://github.com/ijames55/python_blackjack" target="_blank">Source</a>
+                        </div>
+                    </figure>
+
+                </div>
+
             </div>
-
-            <div class="grid-cell">
-                <figure class="project">
-                    <img src="http://placehold.it/640x360" alt="">
-                    <div class="project-container">
-                        <a href="http://lamda.jwoods.me" target="_blank">The Drama Centre</a>
-                        <p>A HTML5, CSS3 and Bootstrap site built for a local start up.</p>
-                    </div>
-                </figure>
-            </div>
-
-            <div class="grid-cell">
-                <figure class="project">
-                    <img src="http://placehold.it/640x360" alt="">
-                    <div class="project-container">
-                        <a href="http://github.com/ijames55/python_blackjack" target="_blank">Python Blackjack</a>
-                        <p>A console blackjack game built with Python.</p>
-                    </div>
-                </figure>
-
-            </div>
-
         </div>
-
     </section>
 
 </body>
