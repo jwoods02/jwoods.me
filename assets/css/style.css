@@ -12,13 +12,21 @@ STRONG  text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
 */
 
+/* Applies box model and CSS reset to all elements */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body, html {
   margin: 0;
   padding: 0;
 }
 
-#hero, #skills, #work, #contact {
-  min-height: 100vh;
+section {
   position: relative;
   padding: 1px 1em;
   text-align: center;
@@ -27,12 +35,7 @@ body, html {
   font-size: 1.25em;
 }
 
-h2 {
-  padding-top: 7.5vh;
-  font-size: 2.5em;
-}
-
-h1, h2, h3, nav a, .skill {
+h1, h2, h3 {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
@@ -42,172 +45,88 @@ h1, h2, h3 {
 }
 
 
-#hero, #nav-home:after {background-color: #B8312F;}
-#skills, #nav-skills:after {background-color: #1fa67a;}
-#work, #nav-work:after {background-color: #2980b9;}
-#contact, #nav-contact:after {background-color: #2c3e50;}
-
-
-/* NAV */
-nav {
-  position: fixed;
-  width: 100%;
-  text-align: center;
-  z-index: 99;
-  padding-top: 1vh;
-}
-nav a {
-  font-size: 1.25em;
-  text-decoration: none;
-  display: inline;
-  margin: 0 1vw;
-  padding: 0 6vw 4px;
-  position: relative;
-  height: 60px;
-  line-height: 60px;
-  text-decoration: none;
-  color: #fff;
-  text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-nav a:after {
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  height: 3px;
-  bottom: -3px;
-  content: "";
-  transition: .5s cubic-bezier(.68, -.55, .265, 1.55);
-  transform: translate3d(0, 0, 0);
-}
-
-nav a:hover:after {
-  left: 42px;
-  right: 40px;
-}
+#hero {background-color: #2c3e50;}
 
 /* HERO */
 #hero {
 
 }
+
+#hero h1 {
+  padding-top: 10vh;
+  padding-bottom: 5vw;
+  font-size: 6em;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 #hero p {
   font-size: 2.5em;
   text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
-}
-#hero h1 {
-  padding-top: 10vh;
-  font-size: 6em;
-  text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
+  padding-bottom: 5vw;
 
 }
 
-/* SKILLS */
-
-#skills {
-
-}
-
-#skills-container {
-  text-align: left;
-  padding: 0 10vw;
-}
-#skills-container > p {
-  padding-top: 2vh;
-  text-align: center;
-}
-
-.skill {
-  padding: 2vh 0;
-}
-
-.meter {
-  width: 80%;
-  float: right;
-  height: 20px;
-  position: relative;
-  background: #10533d;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  padding: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-.meter > span {
-  display: block;
-  height: 100%;
-  border-radius: 20px 20px 20px 20px;
-  background-color: #f5f6f7;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-
-/* WORK */
-#work {
+.contact{
+    padding-bottom: 5vw;
 
 }
-#work p {
+
+.contact a{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.contact a {
   display: inline;
   color: #f5f6f7;
 }
 
-#work .project {
-  margin-bottom: 5vh;
-
-}
-
-#work a {
-  display: inline;
-  color: #f5f6f7;
-}
-
-#work a:hover {
+.contact a:hover {
   text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   color: #97c8e8;
 }
 
-
-/* CONTACT */
-#contact {
-
-}
-#contact a {
-  text-decoration: none;
-  color: #f5f6f7;
-  display: block;
-  margin-bottom: 5vh;
+/* WORK */
+#work {
+    margin: 1em;
 }
 
-#contact a:hover {
-  text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  color: #aabed1;
+.grid {
+    display: flex;
 }
 
-#contact i {
-  padding-right: 10px;
+.grid-cell {
+    flex: 1;
+    margin: 1em;
 }
-#contact p {
-  position: absolute;
-  bottom: 0;
-  left: 1;
-  font-size: 0.8em;
-  opacity: 0.7;
+
+.project {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.project img {
+    width: 100%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.project:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.project-container {
+    padding: 2px 16px;
+}
 }
 
 /* CSS ANIMATIONS */
 #scroll-animate {visibility: hidden;}
-.stretchRight {visibility: visible !important;}
 
 
 /* RESPONSIVE */
 @media (max-width: 1000px) {
-  #skills-container {
-    padding: 0 5vw;
-  }
-
   h2 {
     font-size: 1.5em;
   }
@@ -217,14 +136,7 @@ nav a:hover:after {
     padding-top: 5vh;
   }
 }
-@media (max-width: 650px) {
-  #skills-container {
-    padding: 0 0;
-  }
-  nav a {
-    padding: 0 3vw 4px;
-  }
-}
+
 @media (max-width: 600px), (max-height: 600px) {
   #hero h1 {
     padding-top: 2vh;
@@ -234,18 +146,11 @@ nav a:hover:after {
     display: none;
   }
 
-  nav a, #hero, #skills, #work, #contact {
+  body {
     font-size: 1em;
   }
-}
-@media (max-width: 475px) {
-  .meter {
-    float: none;
-    margin: 1vh;
-  }
-}
-@media (max-width: 375px) {
-  nav a {
-    font-size: 0.9em;
+
+  .flex-grid {
+    display: block;
   }
 }
