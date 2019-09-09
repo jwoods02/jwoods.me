@@ -43,7 +43,7 @@ function Header({ siteTitle }) {
       <Container maxWidth="lg">
         <Toolbar className={classes.root}>
           <Typography variant="h6" className={classes.title}>
-            James Woods
+            {siteTitle}
           </Typography>
           <Button color="inherit">Work</Button>
           <Button color="inherit">Blog</Button>
