@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "James Woods",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal blog and portfolio for James Woods",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "James Woods <jwwoods01@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.4.0",
     "fg-loadcss": "^2.1.0",
@@ -44,9 +44,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/jwoods02/jwoods.me"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jwoods02/jwoods.me/issues"
   }
 }
