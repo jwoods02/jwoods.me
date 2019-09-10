@@ -39,10 +39,10 @@ function Header({ siteTitle }) {
   }, [])
 
   return (
-    <AppBar color="primary">
+    <AppBar color="primary" position="sticky">
       <Container maxWidth="lg">
         <Toolbar className={classes.root}>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h5" className={classes.title}>
             {siteTitle}
           </Typography>
           <Button color="inherit">Work</Button>
