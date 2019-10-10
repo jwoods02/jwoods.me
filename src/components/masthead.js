@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Hero() {
+function MastHead() {
   const classes = useStyles()
   return (
     <Grid container spacing={8} className={classes.root}>
@@ -34,4 +34,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default MastHead
