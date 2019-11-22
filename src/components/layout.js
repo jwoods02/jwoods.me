@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import { Container } from "@material-ui/core"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,13 +30,13 @@ const Layout = ({ children }) => {
         rel="stylesheet"
       ></link>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Container maxWidth="lg">
+      <div className="container mx-auto">
         <main>{children}</main>
         <footer>
           © James Woods, 2019. Built using{` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a> with ❤️ in London, UK
         </footer>
-      </Container>
+      </div>
     </>
   )
 }
