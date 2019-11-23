@@ -1,9 +1,9 @@
 // import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import { loadCSS } from "fg-loadcss"
+import PropTypes from 'prop-types';
+import React from 'react';
+import { loadCSS } from 'fg-loadcss';
 
-import HeaderLink from "./headerLink"
+import HeaderLink from './headerLink';
 
 function HeaderTitle({ siteTitle }) {
   return (
@@ -12,16 +12,16 @@ function HeaderTitle({ siteTitle }) {
         👨‍💻 {siteTitle}
       </a>
     </div>
-  )
+  );
 }
 
 function Header({ siteTitle }) {
   React.useEffect(() => {
     loadCSS(
-      "https://use.fontawesome.com/releases/v5.1.0/css/all.css",
-      document.querySelector("#font-awesome-css")
-    )
-  }, [])
+      'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+      document.querySelector('#font-awesome-css')
+    );
+  }, []);
 
   return (
     <div className="bg-blue-500 p-6">
@@ -36,15 +36,15 @@ function Header({ siteTitle }) {
         </div>
       </nav>
     </div>
-  )
+  );
 }
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

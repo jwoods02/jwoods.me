@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 function MastHead() {
   return (
@@ -8,7 +8,7 @@ function MastHead() {
         for the web and mobile
       </h1>
     </div>
-  )
+  );
 }
 
-export default MastHead
+export default MastHead;

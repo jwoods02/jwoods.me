@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 export default function headerLink({ href, children }) {
   return (
@@ -8,5 +8,5 @@ export default function headerLink({ href, children }) {
     >
       {children}
     </a>
-  )
+  );
 }

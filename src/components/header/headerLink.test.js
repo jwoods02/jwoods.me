@@ -1,23 +1,23 @@
-import React from "react"
-import { render } from "@testing-library/react"
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import HeaderLink from "./headerLink"
+import HeaderLink from './headerLink';
 
 describe(`HeaderLink`, () => {
   it(`renders text for a link`, () => {
-    const text = `Test text`
-    const { getByText } = render(<HeaderLink href="/test">{text}</HeaderLink>)
+    const text = `Test text`;
+    const { getByText } = render(<HeaderLink href="/test">{text}</HeaderLink>);
 
-    const link = getByText(text)
+    const link = getByText(text);
 
-    expect(link).toBeTruthy()
-  })
+    expect(link).toBeTruthy();
+  });
   it(`renders a link for a given url`, () => {
-    const href = `/test`
-    const { getByText } = render(<HeaderLink href={href}>Test</HeaderLink>)
+    const href = `/test`;
+    const { getByText } = render(<HeaderLink href={href}>Test</HeaderLink>);
 
-    const link = getByText("Test")
+    const link = getByText('Test');
 
-    expect(link.getAttribute("href")).toBe(href)
-  })
-})
+    expect(link.getAttribute('href')).toBe(href);
+  });
+});

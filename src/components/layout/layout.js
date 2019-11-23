@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from "../header/header"
-import "./layout.css"
+import Header from '../header/header';
+import './layout.css';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -26,16 +26,16 @@ const Layout = ({ children }) => {
       <div className="container mx-auto text-gray-900 leading-normal">
         <main>{children}</main>
         <footer>
-          © James Woods, 2019. Built using{` `}
+          © James Woods, 2019. Built using
           <a href="https://www.gatsbyjs.org">Gatsby</a> with ❤️ in London, UK
         </footer>
       </div>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
