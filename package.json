@@ -52,7 +52,9 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "ci": "npm run lint && npm run test -- --ci",
     "develop": "gatsby develop",
+    "netlify": "npm run ci && npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "npm run develop",
