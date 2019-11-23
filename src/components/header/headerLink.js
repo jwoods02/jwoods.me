@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function headerLink({ href, children }) {
+export default function HeaderLink({ href, children }) {
   return (
     <a
       href={href}
@@ -10,3 +11,12 @@ export default function headerLink({ href, children }) {
     </a>
   );
 }
+
+HeaderLink.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node,
+};
+
+HeaderLink.defaultProps = {
+  href: '#',
+};

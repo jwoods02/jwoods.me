@@ -1,6 +1,5 @@
-// import { Link } from "gatsby"
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { loadCSS } from 'fg-loadcss';
 
 import HeaderLink from './headerLink';
@@ -14,6 +13,10 @@ function HeaderTitle({ siteTitle }) {
     </div>
   );
 }
+
+HeaderTitle.propTypes = {
+  siteTitle: PropTypes.node,
+};
 
 function Header({ siteTitle }) {
   React.useEffect(() => {

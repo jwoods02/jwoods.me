@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // https://www.gatsbyjs.org/docs/unit-testing/#mocking-gatsby
 const React = require('react');
 
