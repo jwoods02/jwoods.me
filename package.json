@@ -22,6 +22,8 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@testing-library/jest-dom": "^4.0.0",
     "@testing-library/react": "^9.1.4",
     "babel-eslint": "^9.0.0",
@@ -37,6 +39,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
@@ -62,5 +65,15 @@
   },
   "bugs": {
     "url": "https://github.com/jwoods02/jwoods.me/issues"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
