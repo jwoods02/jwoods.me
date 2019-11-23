@@ -12,7 +12,7 @@ function Header({ siteTitle }) {
   }, [])
 
   return (
-    <div className="bg-teal-500 p-6">
+    <div className="bg-blue-500 p-6">
       <nav className="container mx-auto flex items-center justify-between flex-wrap ">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <a href="/" className="font-semibold text-2xl tracking-tight">
