@@ -23,13 +23,12 @@ const Layout = ({ children }) => {
         rel="stylesheet"
       ></link>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="container mx-auto text-gray-900 leading-normal">
-        <main>{children}</main>
-        <footer>
-          © James Woods, 2019. Built using
-          <a href="https://www.gatsbyjs.org">Gatsby</a> with ❤️ in London, UK
-        </footer>
-      </div>
+      <main className="max-w-4xl p-6 mx-auto text-gray-900 leading-normal">
+        {children}
+      </main>
+      <footer className="max-w-4xl p-6 mx-auto text-gray-900 leading-normal">
+        © James Woods, 2019
+      </footer>
     </>
   );
 };
