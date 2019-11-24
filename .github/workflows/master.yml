@@ -19,6 +19,7 @@ jobs:
           node-version: 12.x
       - name: npm run ci and build
         run: |
+          npm install
           npm run ci
           npm run build
         env:
