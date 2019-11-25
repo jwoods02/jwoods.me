@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
         rel="stylesheet"
       ></link>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="max-w-4xl p-6 mx-auto text-gray-900 leading-normal">
+      <main className="container p-6 mx-auto text-gray-900 leading-normal">
         {children}
       </main>
       <footer className="max-w-4xl p-6 mx-auto text-gray-900 leading-normal">
