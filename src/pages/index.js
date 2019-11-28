@@ -10,9 +10,30 @@ const IndexPage = () => (
     <SEO title="Home" />
     <MastHead></MastHead>
     <div className="flex flex-wrap justify-between">
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
+      <ProjectCard
+        title="Example project"
+        tags={['React', 'Gatsby', 'GraphQL']}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+        nihil.
+      </ProjectCard>
+      <ProjectCard
+        title="Example project"
+        tags={['React', 'Gatsby', 'GraphQL']}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+        nihil.
+      </ProjectCard>
+      <ProjectCard
+        title="Example project"
+        tags={['React', 'Gatsby', 'GraphQL']}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+        nihil.
+      </ProjectCard>
     </div>
   </Layout>
 );
