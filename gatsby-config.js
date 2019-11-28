@@ -28,5 +28,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout/layout.js'),
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/content/projects`,
+      },
+    },
   ],
 };
