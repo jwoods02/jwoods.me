@@ -8,7 +8,7 @@ function HeaderTitle({ siteTitle }) {
   return (
     <div className="flex items-center flex-shrink-0 text-white mr-6">
       <a href="/" className="font-semibold text-2xl tracking-tight">
-        👨‍💻 {siteTitle}
+        👨‍💻<span className="hidden sm:inline"> {siteTitle}</span>
       </a>
     </div>
   );

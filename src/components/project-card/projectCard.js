@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 
 export default function ProjectCard({ title, children, tags }) {
   return (
-    <div className="p-4 w-1/3">
+    <div className="py-4 w-full md:p-4 md:w-1/2 xl:w-1/3">
       <div className="rounded overflow-hidden shadow-lg">
         <img
           className="w-full"

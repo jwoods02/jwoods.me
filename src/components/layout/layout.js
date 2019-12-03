@@ -23,10 +23,10 @@ const Layout = ({ children }) => {
         rel="stylesheet"
       ></link>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="container p-6 mx-auto text-gray-900 leading-normal">
+      <main className="container p-4 md:py-6 mx-auto text-gray-900 leading-normal">
         {children}
       </main>
-      <footer className="max-w-4xl p-6 mx-auto text-gray-900 leading-normal">
+      <footer className="container p-4 md:py-6 mx-auto text-gray-900 leading-normal">
         © James Woods, 2019
       </footer>
     </>
