@@ -40,5 +40,5 @@ ProjectCard.propTypes = {
   title: propTypes.string,
   children: propTypes.node,
   tags: propTypes.arrayOf(propTypes.string),
-  date: propTypes.string
+  date: propTypes.string,
 };
