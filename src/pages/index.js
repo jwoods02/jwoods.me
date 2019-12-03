@@ -14,7 +14,7 @@ const IndexPage = () => {
       <MastHead></MastHead>
       <div className="flex flex-wrap justify-between">
         {projects.map(project => (
-          <ProjectCard title={project.title} tags={project.tags}>
+          <ProjectCard title={project.title} tags={project.tags} date={project.date}>
             {project.description}
           </ProjectCard>
         ))}
