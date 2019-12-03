@@ -12,9 +12,13 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <MastHead></MastHead>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap">
         {projects.map(project => (
-          <ProjectCard title={project.title} tags={project.tags} date={project.date}>
+          <ProjectCard
+            title={project.title}
+            tags={project.tags}
+            date={project.date}
+          >
             {project.description}
           </ProjectCard>
         ))}
