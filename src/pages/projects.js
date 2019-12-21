@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Layout from '../components/layout/layout';
-import SEO from '../components/seo/seo';
-import MastHead from '../components/masthead/masthead';
-import ProjectCard from '../components/project-card/projectCard';
+import Layout from '../components/core/layout/layout';
+import SEO from '../components/core/seo/seo';
+import MastHead from '../components/core/masthead/masthead';
+import ProjectCard from '../components/project/project-card/projectCard';
 import useProjects from '../hooks/useProjects';
 
 const ProjectsPage = () => {

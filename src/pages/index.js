@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Layout from '../components/layout/layout';
-import SEO from '../components/seo/seo';
-import MastHead from '../components/masthead/masthead';
+import Layout from '../components/core/layout/layout';
+import SEO from '../components/core/seo/seo';
+import MastHead from '../components/core/masthead/masthead';
 
 const IndexPage = () => (
   <Layout>
