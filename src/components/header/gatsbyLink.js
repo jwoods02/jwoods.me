@@ -1,22 +1,23 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-export default function HeaderLink({ href, children }) {
+export default function GatsbyLink({ href, children }) {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className="inline-block mt-0 text-teal-200 hover:text-white mr-6"
     >
       {children}
-    </a>
+    </Link>
   );
 }
 
-HeaderLink.propTypes = {
+GatsbyLink.propTypes = {
   href: PropTypes.string,
   children: PropTypes.node,
 };
 
-HeaderLink.defaultProps = {
-  href: '#',
+GatsbyLink.defaultProps = {
+  href: '/',
 };

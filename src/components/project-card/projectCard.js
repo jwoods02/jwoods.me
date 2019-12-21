@@ -5,13 +5,8 @@ export default function ProjectCard({ title, children, tags, date }) {
   return (
     <div className="py-4 w-full md:p-4 md:w-1/2 xl:w-1/3">
       <div className="rounded overflow-hidden shadow-lg">
-        <img
-          className="w-full"
-          src="https://tailwindcss.com/img/card-top.jpg"
-          alt="Sunset in the mountains"
-        />
         <div className="px-6 py-4">
-          <p className="text-sm text-gray-600 flex items-center">
+          <p className="text-sm text-gray-600 flex items-center ">
             <svg
               className="fill-current text-gray-500 w-3 h-3 mr-2"
               xmlns="http://www.w3.org/2000/svg"

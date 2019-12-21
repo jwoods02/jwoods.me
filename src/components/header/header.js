@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { loadCSS } from 'fg-loadcss';
 
-import HeaderLink from './headerLink';
+import ExternalLink from './externalLink';
+import GatsbyLink from './gatsbyLink';
 
 function HeaderTitle({ siteTitle }) {
   return (
@@ -32,9 +33,9 @@ function Header({ siteTitle }) {
         <HeaderTitle siteTitle={siteTitle}></HeaderTitle>
         <div className="flex items-center flex-shrink-0 items-center w-auto">
           <div className="text-lg self-end">
-            <HeaderLink href="#">Blog</HeaderLink>
-            <HeaderLink href="#">CV</HeaderLink>
-            <HeaderLink href="#">Contact</HeaderLink>
+            <GatsbyLink href="/projects">Projects</GatsbyLink>
+            <ExternalLink href="#">CV</ExternalLink>
+            <ExternalLink href="#">Contact</ExternalLink>
           </div>
         </div>
       </nav>
