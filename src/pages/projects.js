@@ -15,9 +15,11 @@ const ProjectsPage = () => {
       <div className="flex flex-wrap">
         {projects.map(project => (
           <ProjectCard
+            key={project.title}
             title={project.title}
             tags={project.tags}
             date={project.date}
+            href={project.href}
           >
             {project.description}
           </ProjectCard>

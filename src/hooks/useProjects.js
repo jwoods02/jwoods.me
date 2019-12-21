@@ -10,17 +10,21 @@ const useProjects = () => {
             tags
             description
             date(formatString: "MMM YYYY")
+            href
           }
         }
       }
     }
   `);
 
+  console.log(data);
+
   return data.allMdx.nodes.map(project => ({
     title: project.frontmatter.title,
     description: project.frontmatter.description,
     tags: project.frontmatter.tags,
     date: project.frontmatter.date ? project.frontmatter.date : 'Present',
+    href: project.frontmatter.href ? project.frontmatter.href : '/',
   }));
 };
 

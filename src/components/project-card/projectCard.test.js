@@ -8,8 +8,9 @@ describe(`ProjectCard`, () => {
     const title = 'Example card';
     const description = 'This is a description';
     const tags = ['React', 'GraphQL'];
+    const href = 'https://google.co.uk';
     const { getByText } = render(
-      <ProjectCard title={title} tags={tags}>
+      <ProjectCard title={title} tags={tags} href={href}>
         {description}
       </ProjectCard>
     );
@@ -18,5 +19,7 @@ describe(`ProjectCard`, () => {
     expect(getByText(description)).toBeTruthy();
     expect(getByText(tags[0])).toBeTruthy();
     expect(getByText(tags[1])).toBeTruthy();
+    expect(getByText(title).getAttribute('href')).toBe(href);
+    expect(getByText(description).getAttribute('href')).toBe(href);
   });
 });

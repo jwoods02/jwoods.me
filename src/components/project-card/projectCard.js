@@ -1,10 +1,10 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-export default function ProjectCard({ title, children, tags, date }) {
+export default function ProjectCard({ title, children, tags, date, href }) {
   return (
-    <div className="py-4 w-full md:p-4 md:w-1/2 xl:w-1/3">
-      <div className="rounded overflow-hidden shadow-lg">
+    <article className="py-4 w-full md:p-4 md:w-1/2 xl:w-1/3">
+      <div className="rounded overflow-hidden shadow-lg hover:shadow-2xl">
         <div className="px-6 py-4">
           <p className="text-sm text-gray-600 flex items-center ">
             <svg
@@ -16,18 +16,27 @@ export default function ProjectCard({ title, children, tags, date }) {
             </svg>
             {date}
           </p>
-          <div className="font-bold text-xl">{title}</div>
-          <p className="text-gray-700 text-base">{children}</p>
+          <h3>
+            <a href={href} className="inline-block font-bold text-xl">
+              {title}
+            </a>
+          </h3>
+          <a href={href} className="inline-block text-gray-700 text-base">
+            {children}
+          </a>
         </div>
         <div className="px-6 pb-4">
           {tags.map(tag => (
-            <span className="inline-block bg-gray-200 rounded px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+            <span
+              className="inline-block bg-gray-200 rounded px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+              key={tag}
+            >
               {tag}
             </span>
           ))}
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -36,4 +45,9 @@ ProjectCard.propTypes = {
   children: propTypes.node,
   tags: propTypes.arrayOf(propTypes.string),
   date: propTypes.string,
+  href: propTypes.string,
 };
+
+// ProjectCard.defaultProps = {
+//   href: '/',
+// };
