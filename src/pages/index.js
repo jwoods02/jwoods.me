@@ -7,7 +7,9 @@ import MastHead from '../components/core/masthead/masthead';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <MastHead></MastHead>
+    <MastHead title="Hi, I'm James Woods.">
+      I build applications for the web and mobile.
+    </MastHead>
   </Layout>
 );
 

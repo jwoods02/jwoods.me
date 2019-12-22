@@ -11,7 +11,9 @@ const ProjectsPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <MastHead></MastHead>
+      <MastHead title="My projects.">
+        Here are the projects I've built, mostly from my degree.
+      </MastHead>
       <div className="flex flex-wrap">
         {projects.map(project => (
           <ProjectCard
