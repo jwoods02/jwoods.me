@@ -1,0 +1,45 @@
+name: Build
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: 12.x
+
+    - name: Install dependancies
+      run: npm install
+      
+    - name: Lint
+      run: npm run lint
+
+    - name: Unit tests
+      run: npm run test -- --ci
+
+    - name: End-to-end tests
+      uses: cypress-io/github-action@v1
+      with:
+        start: npm start
+        browser: chrome
+        headless: true
+    - uses: actions/upload-artifact@v1
+      if: failure()
+      with:
+        name: cypress-screenshots
+        path: cypress/screenshots
+    - uses: actions/upload-artifact@v1
+      if: always()
+      with:
+        name: cypress-videos
+        path: cypress/videos
+    - name: Deploy
+      run: echo "Deploy to Zeit's Now"
