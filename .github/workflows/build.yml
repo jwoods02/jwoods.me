@@ -56,7 +56,5 @@ jobs:
         name: cypress-videos
         path: cypress/videos
 
-    - name: Deploy to Zeit Now (Production)
-      uses: joelwmale/webhook-action@1.0.0
-      with:
-        WEBHOOK_URL: ${{ secrets.DEPLOY_PROD_URL }}
+    - name: Trigger Zeit Now Deployment (Production)
+      run: http post ${{ secrets.DEPLOY_PROD_URL }}
