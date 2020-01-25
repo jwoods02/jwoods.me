@@ -10,11 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Set Node.js
       uses: actions/setup-node@master
       with:
         node-version: 12.x
+
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
 
     - name: Install dependancies
       run: npm install
@@ -25,21 +35,26 @@ jobs:
     - name: Unit tests
       run: npm run test -- --ci
 
-    - name: End-to-end tests
+    - name: Run e2e tests
       uses: cypress-io/github-action@v1
       with:
         start: npm start
         browser: chrome
         headless: true
-    - uses: actions/upload-artifact@v1
+
+    - name: Save e2e screenshots
+      uses: actions/upload-artifact@v1
       if: failure()
       with:
         name: cypress-screenshots
         path: cypress/screenshots
-    - uses: actions/upload-artifact@v1
+
+    - name: Upload e2e vidoe
+      uses: actions/upload-artifact@v1
       if: always()
       with:
         name: cypress-videos
         path: cypress/videos
-    - name: Deploy
+
+    - name: Deploy (WIP)
       run: echo "Deploy to Zeit's Now"
