@@ -6,6 +6,7 @@ import MastHead from '../components/core/masthead/masthead';
 import usePosts from '../hooks/usePosts';
 
 const IndexPage = () => {
+  // eslint-disable-next-line no-unused-vars
   const posts = usePosts();
   return (
     <Layout>
