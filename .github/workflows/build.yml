@@ -3,60 +3,58 @@ name: Build
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   run:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set Node.js
-      uses: actions/setup-node@master
-      with:
-        node-version: 12.x
+      - uses: actions/checkout@v2
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.x
 
-    - name: Cache node modules
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
-    - name: Install dependancies
-      run: npm install
-      
-    - name: Lint
-      run: npm run lint
+      - name: Install dependancies
+        run: npm install
 
-    - name: Unit tests
-      run: npm run test -- --ci
+      - name: Lint
+        run: npm run lint
 
-    - name: Run e2e tests
-      uses: cypress-io/github-action@v1
-      with:
-        start: npm start
-        browser: chrome
-        headless: true
+      - name: Unit tests
+        run: npm run test -- --ci
 
-    - name: Save e2e screenshots
-      uses: actions/upload-artifact@v1
-      if: failure()
-      with:
-        name: cypress-screenshots
-        path: cypress/screenshots
+      - name: Run e2e tests
+        uses: cypress-io/github-action@v1
+        with:
+          start: npm start
+          browser: chrome
+          headless: true
 
-    - name: Upload e2e vidoe
-      uses: actions/upload-artifact@v1
-      if: always()
-      with:
-        name: cypress-videos
-        path: cypress/videos
+      - name: Save e2e screenshots
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
 
-    - name: Trigger Zeit Now Deployment (Production)
-      uses: wei/curl@master
-      with:
-        args: ${{ secrets.DEPLOY_PROD_URL }}
+      - name: Upload e2e vidoe
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+
+      - name: Trigger Zeit Now Deployment (Production)
+        run: npx now --token ${{ secrets.NOW_TOKEN }} --prod
