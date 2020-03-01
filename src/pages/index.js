@@ -14,9 +14,9 @@ const IndexPage = () => {
       <MastHead title="Hi, I'm James Woods.">
         I build applications for the web and mobile.
       </MastHead>
-      {/* {posts.map(post => (
+      {posts.map(post => (
         <pre>{JSON.stringify(post, null, 2)}</pre>
-      ))} */}
+      ))}
     </Layout>
   );
 };
