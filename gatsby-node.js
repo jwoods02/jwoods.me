@@ -17,7 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
       {
         allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
+          filter: { fileAbsolutePath: { glob: "**/*/posts/**/*.mdx" } }
         ) {
           edges {
             node {
