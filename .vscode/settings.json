@@ -1,38 +1,11 @@
 // These are all my auto-save configs
 {
-  "editor.formatOnSave": true,
-  // turn it off for JS and JSX, we will do this via eslint
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": false
-  },
-  // tell the ESLint plugin to run on save
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-  // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
-  "prettier.disableLanguages": ["javascript", "javascriptreact"],
-
   // Peacock (VSCode Extension) theme
   "workbench.colorCustomizations": {
-    "activityBar.background": "#037fa2",
-    "activityBar.activeBorder": "#fd82e2",
-    "activityBar.foreground": "#e7e7e7",
-    "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#fd82e2",
-    "activityBarBadge.foreground": "#15202b",
-    "titleBar.activeBackground": "#025870",
-    "titleBar.inactiveBackground": "#02587099",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveForeground": "#e7e7e799",
     "statusBar.background": "#025870",
     "statusBarItem.hoverBackground": "#037fa2",
     "statusBar.foreground": "#e7e7e7",
-    "activityBar.activeBackground": "#037fa2",
     "statusBar.border": "#025870",
-    "titleBar.border": "#025870"
   },
   "peacock.color": "#025870"
 }
