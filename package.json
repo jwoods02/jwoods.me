@@ -5,9 +5,9 @@
   "version": "0.1.0",
   "author": "James Woods <jwwoods01@gmail.com>",
   "dependencies": {
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.6",
     "parcel-bundler": "^1.12.4",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.9.2"
   },
   "devDependencies": {},
   "license": "MIT",
