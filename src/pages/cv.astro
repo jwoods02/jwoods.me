@@ -1,0 +1,139 @@
+---
+import { getEntry, render } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const entry = await getEntry("cv", "cv");
+if (!entry) throw new Error("Could not find CV content");
+const { data: cv } = entry;
+
+const homeEntry = await getEntry("home", "index");
+if (!homeEntry) throw new Error("Could not find home page content");
+const { Content: Profile } = await render(homeEntry);
+---
+
+<Base title={`${cv.title} — CV`} description={`${cv.subtitle} — ${cv.location}`}>
+  <div class="min-h-screen bg-white text-stone-900 print:bg-white">
+    <div class="max-w-3xl mx-auto px-8 py-16 print:py-8 print:px-4">
+      <!-- Header -->
+      <header class="mb-12 print:mb-8">
+        <h1 class="text-3xl font-bold tracking-tight">{cv.title}</h1>
+        <p class="text-stone-500 mt-1">
+          {cv.subtitle} &middot; {cv.location}
+        </p>
+        <div
+          class="flex flex-wrap gap-x-6 gap-y-1 mt-3 text-sm text-stone-500"
+        >
+          {
+            cv.links.map((link) => (
+              <a
+                href={link.href}
+                class="hover:text-stone-900 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </div>
+      </header>
+
+      <!-- Profile -->
+      <section class="mb-12 print:mb-8">
+        <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-6">
+          Profile
+        </h2>
+        <div class="text-sm text-stone-600 leading-relaxed prose prose-sm prose-stone max-w-none [&>p+p]:mt-4">
+          <Profile />
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="mb-12 print:mb-8">
+        <h2
+          class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-6"
+        >
+          Experience
+        </h2>
+        <div class="space-y-8 print:space-y-5">
+          {
+            cv.experience.map((job) => (
+              <div>
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                  <h3 class="font-semibold">{job.role}</h3>
+                  <p class="text-sm text-stone-400 shrink-0">{job.period}</p>
+                </div>
+                {job.previousRole && (
+                  <div class="mt-1 mb-1 pl-4 border-l-2 border-stone-200">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                      <p class="text-sm font-semibold text-stone-900">
+                        {job.previousRole.title}
+                      </p>
+                      <p class="text-sm text-stone-400 shrink-0">
+                        {job.previousRole.period}
+                      </p>
+                    </div>
+                  </div>
+                )}
+                <p class="text-sm text-stone-500">
+                  {job.company} &middot; {job.location}
+                </p>
+                {job.bullets.length > 0 && (
+                  <ul class="mt-2 space-y-1">
+                    {job.bullets.map((bullet) => (
+                      <li class="text-sm text-stone-600 leading-relaxed pl-4 relative before:content-['›'] before:absolute before:left-0 before:text-stone-300">
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {job.tech.length > 0 && (
+                  <div class="flex flex-wrap gap-1.5 mt-3">
+                    {job.tech.map((t) => (
+                      <span class="text-xs text-stone-600 bg-stone-100 px-2.5 py-1 rounded print:bg-stone-100">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="mb-12 print:mb-8">
+        <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-6">
+          Education
+        </h2>
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+          <div>
+            <h3 class="font-semibold">{cv.education.degree}</h3>
+            <p class="text-sm text-stone-500">
+              {cv.education.school} &middot; {cv.education.result}
+            </p>
+          </div>
+          <p class="text-sm text-stone-400">{cv.education.period}</p>
+        </div>
+        {cv.education.bullets && cv.education.bullets.length > 0 && (
+          <ul class="mt-2 space-y-1">
+            {cv.education.bullets.map((b: string) => (
+              <li class="text-sm text-stone-600 leading-relaxed pl-4 relative before:content-['›'] before:absolute before:left-0 before:text-stone-300">
+                {b}
+              </li>
+            ))}
+          </ul>
+        )}
+        {cv.education.tech && cv.education.tech.length > 0 && (
+          <div class="flex flex-wrap gap-1.5 mt-3">
+            {cv.education.tech.map((t: string) => (
+              <span class="text-xs text-stone-600 bg-stone-100 px-2.5 py-1 rounded print:bg-stone-100">
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+      </section>
+
+    </div>
+  </div>
+</Base>
