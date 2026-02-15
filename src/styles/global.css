@@ -5,6 +5,30 @@
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
 }
 
+/* ── Print styles (CV) ─────────────────────────────── */
+@page {
+  size: A4;
+  margin: 12mm 14mm;
+}
+
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Remove default link decorations / URL suffixes browsers add */
+  a,
+  a:visited {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
+}
+
 /* Scroll-triggered fade-in animation */
 @keyframes fade-up {
   from {

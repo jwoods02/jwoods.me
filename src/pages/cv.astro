@@ -13,7 +13,7 @@ const { Content: Profile } = await render(homeEntry);
 
 <Base title={`${cv.title} — CV`} description={`${cv.subtitle} — ${cv.location}`}>
   <div class="min-h-screen bg-white text-stone-900 print:bg-white">
-    <div class="max-w-3xl mx-auto px-8 py-16 print:py-8 print:px-4">
+    <div class="max-w-3xl mx-auto px-8 py-16 print:py-0 print:px-0 print:max-w-none">
       <!-- Header -->
       <header class="mb-12 print:mb-8">
         <h1 class="text-3xl font-bold tracking-tight">{cv.title}</h1>
